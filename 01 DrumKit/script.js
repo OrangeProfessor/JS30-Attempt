@@ -5,10 +5,14 @@
 
 document.addEventListener("keydown", ev => {
     
-    let audioElement = document.getElementById(`${ev.key.toUpperCase()}`);
+    let box = document.getElementById(`${ev.key.toUpperCase()}`);
+    //let audioElement = box.querySelector(".sound-name");
+    let audioName = box.querySelector(".sound-name").textContent;
+    let something = new Audio(`sounds/${audioName}.wav`);
+    something.play();
     //let audioName = ev.key.toUpperCase();
     //let audioElement = document.querySelector(`.${audioNa}`)
-    console.log(audioElement);
+    //console.log(something);
 });
 
 
